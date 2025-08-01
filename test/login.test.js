@@ -1,7 +1,9 @@
-const request = require("supertest");
-const { expect } = require("chai");
-require("dotenv").config();
-const postLogin = require("../fixtures/postLogin.json");
+import request from "supertest";
+import { expect } from "chai";
+import * as dotenv from "dotenv";
+import postLogin from "../fixtures/postLogin.json" assert { type: "json" };
+
+dotenv.config();
 
 describe("Login", () => {
   describe("POST /login", () => {
